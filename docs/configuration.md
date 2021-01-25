@@ -3,25 +3,23 @@ layout: default
 title: Configuration
 nav_order: 2
 ---
-
 # Configuration
+
 {: .no_toc }
 
-
-Just the Docs has some specific configuration parameters that can be defined in your Jekyll site's _config.yml file.
+Just the Docs has some specific configuration parameters that can be defined in your Jekyll site's \_config.yml file.
 {: .fs-6 .fw-300 }
 
 ## Table of contents
+
 {: .no_toc .text-delta }
 
-1. TOC
-{:toc}
+1.  TOC
+    {:toc}
 
----
+***
 
-
-View this site's [_config.yml](https://github.com/pmarsceill/just-the-docs/tree/master/_config.yml) file as an example.
-
+View this site's [\_config.yml](https://github.com/pmarsceill/just-the-docs/tree/master/\_config.yml) file as an example.
 
 ## Site logo
 
@@ -106,14 +104,14 @@ gh_edit_branch: "master" # the branch that your docs is served from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
 ```
 
-_note: `footer_content` is deprecated, but still supported. For a better experience we have moved this into an include called `_includes/footer_custom.html` which will allow for robust markup / liquid-based content._
+*note: `footer_content` is deprecated, but still supported. For a better experience we have moved this into an include called `_includes/footer_custom.html` which will allow for robust markup / liquid-based content.*
 
-- the "page last modified" data will only display if a page has a key called `last_modified_date`, formatted in some readable date format
-- `last_edit_time_format` uses Ruby's DateTime formatter; see examples and more information [at this link.](https://apidock.com/ruby/DateTime/strftime)
-- `gh_edit_repository` is the URL of the project's GitHub repository
-- `gh_edit_branch` is the branch that the docs site is served from; defaults to `master`
-- `gh_edit_source` is the source directory that your project files are stored in (should be the same as [site.source](https://jekyllrb.com/docs/configuration/options/))
-- `gh_edit_view_mode` is `"tree"` by default, which brings the user to the github page; switch to `"edit"` to bring the user directly into editing mode
+*   the "page last modified" data will only display if a page has a key called `last_modified_date`, formatted in some readable date format
+*   `last_edit_time_format` uses Ruby's DateTime formatter; see examples and more information [at this link.](https://apidock.com/ruby/DateTime/strftime)
+*   `gh_edit_repository` is the URL of the project's GitHub repository
+*   `gh_edit_branch` is the branch that the docs site is served from; defaults to `master`
+*   `gh_edit_source` is the source directory that your project files are stored in (should be the same as [site.source](https://jekyllrb.com/docs/configuration/options/))
+*   `gh_edit_view_mode` is `"tree"` by default, which brings the user to the github page; switch to `"edit"` to bring the user directly into editing mode
 
 ## Color scheme
 
@@ -121,6 +119,7 @@ _note: `footer_content` is deprecated, but still supported. For a better experie
 # Color scheme supports "light" (default) and "dark"
 color_scheme: dark
 ```
+
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
 
 <script>
@@ -137,7 +136,7 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 });
 </script>
 
-See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more information.
+See \[Customization]\({{ site.baseurl }}{% link docs/customization.md %}) for more information.
 
 ## Google Analytics
 
@@ -154,6 +153,7 @@ By default, the navigation and search include normal [pages](https://jekyllrb.co
 Instead, you can also use [Jekyll collections](https://jekyllrb.com/docs/collections/) which group documents semantically together.
 
 For example, put all your documentation files in the `_docs` folder and create the `docs` collection:
+
 ```yaml
 # Define Jekyll collections
 collections:
@@ -179,6 +179,7 @@ just_the_docs:
 
 You can reference multiple collections.
 This creates categories in the navigation with the configured names.
+
 ```yaml
 collections:
   docs:
@@ -195,4 +196,3 @@ just_the_docs:
     tutorials:
       name: Tutorials
 ```
-
